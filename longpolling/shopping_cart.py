@@ -57,9 +57,6 @@ class DetailHandler(BaseHandler):
         self.render("index.html",session=session,count=count,user=self.current_user)
 
 
-#    @tornado.web.authenticated
-#    def get(self):
-#        self.render('test.html',user=self.current_user)
 
 class CartHandler(tornado.web.RequestHandler):
     def post(self):
@@ -121,7 +118,6 @@ class Application(tornado.web.Application):
         'login_url':"/login"
         }
 
-#    totalInventorynado.web.Application.__init__(self, handlers, **settings)
         tornado.web.Application.__init__(self, handlers, **settings)
 
 if __name__=='__main__':
